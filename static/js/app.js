@@ -1,19 +1,11 @@
+//Get reference to the table body
+var tbody = d3.select("tbody");
+
 // from data.js
 var tableData = data;
-
+  
 // YOUR CODE HERE!
-console.log(data);
-
-data.forEach(function(ufoSights) {
-    console.log(ufoSights);
-    tbody=d3.select("tbody");
-    var row = tbody.append("tr");
-    Object.entries(ufoSights).forEach(function([key, value]) {
-      console.log(key, value);
-      var cell = row.append("td");
-      cell.text(value);
-    });
-  });
+console.log(data)
 
   //console.log for each ufo sighting value via Object.entries
   //adding cells and values for each cell in the rows of each table "tr"
@@ -22,7 +14,7 @@ data.forEach(function(ufoSights) {
     console.log(ufoSights);
     tbody=d3.select("tbody");
     var row = tbody.append("tr");
-  
+
     Object.entries(ufoSights).forEach(function([key, value]) {
       console.log(key, value);
       var cell = row.append("td");
@@ -55,3 +47,4 @@ data.forEach(function(ufoSights) {
             )
         }
     }
+  }
